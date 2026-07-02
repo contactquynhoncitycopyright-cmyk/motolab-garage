@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760" role="img" aria-labelledby="title desc">
+<title id="title">Sau khi hoàn thiện</title><desc id="desc">Sạch sáng · cân chỉnh · vận hành ổn định</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07111e"/><stop offset=".55" stop-color="#13253a"/><stop offset="1" stop-color="#071018"/></linearGradient>
+  <radialGradient id="halo"><stop stop-color="#e9ff39" stop-opacity=".42"/><stop offset="1" stop-color="#e9ff39" stop-opacity="0"/></radialGradient>
+  <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5f8ff"/><stop offset=".45" stop-color="#718096"/><stop offset="1" stop-color="#222a37"/></linearGradient>
+  <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="24" stdDeviation="22" flood-color="#000" flood-opacity=".55"/></filter>
+  <pattern id="floor" width="70" height="70" patternUnits="userSpaceOnUse"><path d="M70 0H0V70" fill="none" stroke="#fff" stroke-opacity=".035"/></pattern>
+</defs>
+<rect width="1000" height="760" rx="28" fill="url(#bg)"/><rect width="1000" height="760" fill="url(#floor)"/>
+<circle cx="760" cy="205" r="300" fill="url(#halo)"/>
+<path d="M0 605H1000V760H0Z" fill="#03070c" opacity=".72"/><path d="M0 607H1000" stroke="#e9ff39" stroke-opacity=".24" stroke-width="3"/>
+<g filter="url(#shadow)"><g transform="translate(150 110)"><circle cx="190" cy="390" r="100" fill="#05080d" stroke="#5c697d" stroke-width="28"/><circle cx="190" cy="390" r="36" fill="#e9ff39"/><circle cx="620" cy="390" r="100" fill="#05080d" stroke="#5c697d" stroke-width="28"/><circle cx="620" cy="390" r="36" fill="#55e6ff"/><path d="M210 370L325 240L530 245L590 370L455 395L340 360Z" fill="#172331" stroke="#e0e6ef" stroke-width="9"/><path d="M325 240Q400 135 550 185L570 245Z" fill="#e9ff39"/><path d="M470 200L590 120" stroke="#e0e6ef" stroke-width="18" stroke-linecap="round"/><path d="M350 255L235 370" stroke="#55e6ff" stroke-width="24" stroke-linecap="round"/></g></g>
+<g font-family="Arial, sans-serif"><rect x="42" y="40" width="250" height="42" rx="21" fill="#e9ff39"/><text x="167" y="68" text-anchor="middle" fill="#06101a" font-size="19" font-weight="800">SAU KHI LÀM</text>
+<text x="48" y="655" fill="#fff" font-size="46" font-weight="900">Sau khi hoàn thiện</text><text x="50" y="700" fill="#c7d2df" font-size="23">Sạch sáng · cân chỉnh · vận hành ổn định</text></g>
+</svg>

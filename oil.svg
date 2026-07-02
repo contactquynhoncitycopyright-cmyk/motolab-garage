@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760" role="img" aria-labelledby="title desc">
+<title id="title">Nhớt tổng hợp 10W40</title><desc id="desc">Bảo vệ động cơ · sang số mượt</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07111e"/><stop offset=".55" stop-color="#13253a"/><stop offset="1" stop-color="#071018"/></linearGradient>
+  <radialGradient id="halo"><stop stop-color="#ffcf4a" stop-opacity=".42"/><stop offset="1" stop-color="#ffcf4a" stop-opacity="0"/></radialGradient>
+  <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5f8ff"/><stop offset=".45" stop-color="#718096"/><stop offset="1" stop-color="#222a37"/></linearGradient>
+  <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="24" stdDeviation="22" flood-color="#000" flood-opacity=".55"/></filter>
+  <pattern id="floor" width="70" height="70" patternUnits="userSpaceOnUse"><path d="M70 0H0V70" fill="none" stroke="#fff" stroke-opacity=".035"/></pattern>
+</defs>
+<rect width="1000" height="760" rx="28" fill="url(#bg)"/><rect width="1000" height="760" fill="url(#floor)"/>
+<circle cx="760" cy="205" r="300" fill="url(#halo)"/>
+<path d="M0 605H1000V760H0Z" fill="#03070c" opacity=".72"/><path d="M0 607H1000" stroke="#ffcf4a" stroke-opacity=".24" stroke-width="3"/>
+<g filter="url(#shadow)"><g transform="translate(330 85)"><path d="M90 80H300L335 150V530Q335 585 280 585H110Q55 585 55 530V150Z" fill="#1a2330" stroke="#ffcf4a" stroke-width="14"/><rect x="120" y="20" width="150" height="95" rx="24" fill="#e8eef7" stroke="#667386" stroke-width="10"/><path d="M80 230H310V475H80Z" fill="#ffcf4a"/><text x="195" y="315" text-anchor="middle" fill="#071018" font-family="Arial" font-size="70" font-weight="900">10W</text><text x="195" y="390" text-anchor="middle" fill="#071018" font-family="Arial" font-size="70" font-weight="900">40</text><path d="M350 185q105 75 0 165" fill="none" stroke="#55e6ff" stroke-width="22" stroke-linecap="round"/></g></g>
+<g font-family="Arial, sans-serif"><rect x="42" y="40" width="250" height="42" rx="21" fill="#ffcf4a"/><text x="167" y="68" text-anchor="middle" fill="#06101a" font-size="19" font-weight="800">PHỤ KIỆN XE MÁY</text>
+<text x="48" y="655" fill="#fff" font-size="46" font-weight="900">Nhớt tổng hợp 10W40</text><text x="50" y="700" fill="#c7d2df" font-size="23">Bảo vệ động cơ · sang số mượt</text></g>
+</svg>

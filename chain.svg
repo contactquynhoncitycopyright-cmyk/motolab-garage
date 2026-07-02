@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760" role="img" aria-labelledby="title desc">
+<title id="title">Bộ nhông sên dĩa</title><desc id="desc">Truyền động êm · thép tôi cứng</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07111e"/><stop offset=".55" stop-color="#13253a"/><stop offset="1" stop-color="#071018"/></linearGradient>
+  <radialGradient id="halo"><stop stop-color="#e9ff39" stop-opacity=".42"/><stop offset="1" stop-color="#e9ff39" stop-opacity="0"/></radialGradient>
+  <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5f8ff"/><stop offset=".45" stop-color="#718096"/><stop offset="1" stop-color="#222a37"/></linearGradient>
+  <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="24" stdDeviation="22" flood-color="#000" flood-opacity=".55"/></filter>
+  <pattern id="floor" width="70" height="70" patternUnits="userSpaceOnUse"><path d="M70 0H0V70" fill="none" stroke="#fff" stroke-opacity=".035"/></pattern>
+</defs>
+<rect width="1000" height="760" rx="28" fill="url(#bg)"/><rect width="1000" height="760" fill="url(#floor)"/>
+<circle cx="760" cy="205" r="300" fill="url(#halo)"/>
+<path d="M0 605H1000V760H0Z" fill="#03070c" opacity=".72"/><path d="M0 607H1000" stroke="#e9ff39" stroke-opacity=".24" stroke-width="3"/>
+<g filter="url(#shadow)"><g transform="translate(190 90)"><circle cx="330" cy="300" r="205" fill="#0c121b" stroke="#d2dae6" stroke-width="24"/><g stroke="#e9ff39" stroke-width="14"><path transform="rotate(0 330 300)" d="M330 82V128"/><path transform="rotate(30 330 300)" d="M330 82V128"/><path transform="rotate(60 330 300)" d="M330 82V128"/><path transform="rotate(90 330 300)" d="M330 82V128"/><path transform="rotate(120 330 300)" d="M330 82V128"/><path transform="rotate(150 330 300)" d="M330 82V128"/><path transform="rotate(180 330 300)" d="M330 82V128"/><path transform="rotate(210 330 300)" d="M330 82V128"/><path transform="rotate(240 330 300)" d="M330 82V128"/><path transform="rotate(270 330 300)" d="M330 82V128"/><path transform="rotate(300 330 300)" d="M330 82V128"/><path transform="rotate(330 330 300)" d="M330 82V128"/></g><circle cx="330" cy="300" r="88" fill="#17202d" stroke="#e9ff39" stroke-width="16"/><path d="M85 425C160 510 500 555 650 430" fill="none" stroke="#b7c0ce" stroke-width="34" stroke-dasharray="26 13" stroke-linecap="round"/><circle cx="690" cy="370" r="80" fill="#101722" stroke="#d2dae6" stroke-width="18"/></g></g>
+<g font-family="Arial, sans-serif"><rect x="42" y="40" width="250" height="42" rx="21" fill="#e9ff39"/><text x="167" y="68" text-anchor="middle" fill="#06101a" font-size="19" font-weight="800">PHỤ KIỆN XE MÁY</text>
+<text x="48" y="655" fill="#fff" font-size="46" font-weight="900">Bộ nhông sên dĩa</text><text x="50" y="700" fill="#c7d2df" font-size="23">Truyền động êm · thép tôi cứng</text></g>
+</svg>

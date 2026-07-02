@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760" role="img" aria-labelledby="title desc">
+<title id="title">Bộ điều khiển ECU</title><desc id="desc">Tinh chỉnh nhiên liệu · kết nối ứng dụng</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07111e"/><stop offset=".55" stop-color="#13253a"/><stop offset="1" stop-color="#071018"/></linearGradient>
+  <radialGradient id="halo"><stop stop-color="#ffb74d" stop-opacity=".42"/><stop offset="1" stop-color="#ffb74d" stop-opacity="0"/></radialGradient>
+  <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5f8ff"/><stop offset=".45" stop-color="#718096"/><stop offset="1" stop-color="#222a37"/></linearGradient>
+  <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="24" stdDeviation="22" flood-color="#000" flood-opacity=".55"/></filter>
+  <pattern id="floor" width="70" height="70" patternUnits="userSpaceOnUse"><path d="M70 0H0V70" fill="none" stroke="#fff" stroke-opacity=".035"/></pattern>
+</defs>
+<rect width="1000" height="760" rx="28" fill="url(#bg)"/><rect width="1000" height="760" fill="url(#floor)"/>
+<circle cx="760" cy="205" r="300" fill="url(#halo)"/>
+<path d="M0 605H1000V760H0Z" fill="#03070c" opacity=".72"/><path d="M0 607H1000" stroke="#ffb74d" stroke-opacity=".24" stroke-width="3"/>
+<g filter="url(#shadow)"><g transform="translate(245 130)"><rect x="70" y="65" width="440" height="340" rx="42" fill="#111925" stroke="#ffb74d" stroke-width="13"/><rect x="120" y="120" width="340" height="220" rx="25" fill="#07101a" stroke="#35465b" stroke-width="7"/><path d="M180 255q60-120 120 0t120 0" fill="none" stroke="#ffb74d" stroke-width="18"/><g fill="#d7dee9"><rect x="120" y="400" width="28" height="75" rx="8"/><rect x="175" y="400" width="28" height="75" rx="8"/><rect x="230" y="400" width="28" height="75" rx="8"/><rect x="285" y="400" width="28" height="75" rx="8"/><rect x="340" y="400" width="28" height="75" rx="8"/><rect x="395" y="400" width="28" height="75" rx="8"/><rect x="450" y="400" width="28" height="75" rx="8"/></g><circle cx="400" cy="165" r="13" fill="#64e59a"/><text x="290" y="305" text-anchor="middle" fill="#fff" font-family="Arial" font-size="34" font-weight="900">ECU</text></g></g>
+<g font-family="Arial, sans-serif"><rect x="42" y="40" width="250" height="42" rx="21" fill="#ffb74d"/><text x="167" y="68" text-anchor="middle" fill="#06101a" font-size="19" font-weight="800">PHỤ KIỆN XE MÁY</text>
+<text x="48" y="655" fill="#fff" font-size="46" font-weight="900">Bộ điều khiển ECU</text><text x="50" y="700" fill="#c7d2df" font-size="23">Tinh chỉnh nhiên liệu · kết nối ứng dụng</text></g>
+</svg>

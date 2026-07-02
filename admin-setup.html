@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080b12" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <title>Thiết lập admin | MOTOLAB</title>
+  <style>
+    :root{--bg:#080b12;--card:#121824;--text:#f4f7fb;--muted:#98a2b3;--line:rgba(255,255,255,.1);--accent:#e9ff39;--danger:#ff6b7a;--success:#67e5a0}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 20% 0,rgba(233,255,57,.08),transparent 30%),var(--bg);color:var(--text);font-family:"Segoe UI",Arial,sans-serif;line-height:1.6}.wrap{width:min(850px,calc(100% - 28px));margin:50px auto}.brand{display:flex;align-items:center;gap:12px;margin-bottom:28px}.mark{width:46px;height:46px;display:grid;place-items:center;border-radius:13px;background:var(--accent);color:#080b12;font-weight:900;font-size:26px}.brand b,.brand small{display:block}.brand small{color:var(--muted)}.card{padding:28px;border:1px solid var(--line);border-radius:20px;background:var(--card);margin-bottom:18px}.eyebrow{color:var(--accent);font-size:11px;font-weight:800;letter-spacing:2px}.card h1{font-size:38px;line-height:1.1;margin:8px 0 12px}.card h2{font-size:22px;margin:0 0 12px}.card p,.card li{color:var(--muted);font-size:14px}code{padding:3px 7px;border-radius:6px;background:#0a0f17;color:#dbe5f2}.config{display:grid;grid-template-columns:160px 1fr;gap:8px 16px;margin:18px 0}.config span{color:var(--muted)}.config b{word-break:break-all}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 18px;border:0;border-radius:11px;background:var(--accent);color:#080b12;font-weight:800;cursor:pointer}.btn:disabled{opacity:.55;cursor:wait}.back{display:inline-block;margin-left:12px;color:var(--muted)}#status{min-height:22px;margin:14px 0 0;font-size:13px}.ok{color:var(--success)}.err{color:var(--danger)}.warning{padding:12px 14px;border:1px solid rgba(255,215,106,.3);border-radius:10px;background:rgba(255,215,106,.06);color:#ffd76a;font-size:13px}@media(max-width:600px){.wrap{margin:24px auto}.card{padding:20px}.card h1{font-size:30px}.config{grid-template-columns:1fr}.back{display:block;margin:12px 0 0}}
+  </style>
+  <script src="config.js" defer></script>
+</head>
+<body>
+  <main class="wrap">
+    <div class="brand"><span class="mark">M</span><span><b id="store">MOTOLAB GARAGE</b><small>Trang thiết lập dành cho chủ website</small></span></div>
+    <section class="card">
+      <span class="eyebrow">KIỂM TRA CẤU HÌNH</span>
+      <h1>Kết nối ntfy với admin</h1>
+      <p>Trang này giúp kiểm tra topic nhận thông báo. Nó không phải trang quản trị có đăng nhập và không lưu dữ liệu khách hàng.</p>
+      <div class="config"><span>Máy chủ</span><b id="server"></b><span>Topic</span><b id="topic"></b><span>Hotline</span><b id="phone"></b><span>Địa chỉ</span><b id="address"></b></div>
+      <button class="btn" id="testBtn">Gửi thông báo thử</button><a class="back" href="index.html">← Về website</a>
+      <p id="status" aria-live="polite"></p>
+    </section>
+    <section class="card">
+      <h2>Cách nhận thông báo</h2>
+      <ol><li>Cài ứng dụng ntfy hoặc mở web app ntfy.</li><li>Subscribe đúng topic đang hiển thị phía trên.</li><li>Nhấn “Gửi thông báo thử”.</li><li>Nếu điện thoại nhận được, hai form trên website đã sẵn sàng.</li></ol>
+      <div class="warning">Topic đặt trong website tĩnh có thể bị xem từ mã nguồn. Không gửi dữ liệu nhạy cảm qua form. Với hệ thống lớn, hãy dùng backend hoặc ntfy tự host có xác thực.</div>
+    </section>
+  </main>
+  <script>
+    window.addEventListener('DOMContentLoaded',()=>{
+      const c=window.MOTOLAB_CONFIG||{};
+      document.getElementById('store').textContent=c.STORE_NAME||'MOTOLAB GARAGE';
+      document.getElementById('server').textContent=c.NTFY_SERVER||'Chưa cấu hình';
+      document.getElementById('topic').textContent=c.NTFY_TOPIC||'Chưa cấu hình';
+      document.getElementById('phone').textContent=c.PHONE||'Chưa cấu hình';
+      document.getElementById('address').textContent=c.ADDRESS||'Chưa cấu hình';
+      document.getElementById('testBtn').addEventListener('click',async(e)=>{
+        const btn=e.currentTarget,status=document.getElementById('status');btn.disabled=true;status.className='';status.textContent='Đang gửi...';
+        try{const server=String(c.NTFY_SERVER||'https://ntfy.sh').replace(/\/$/,'');const r=await fetch(server+'/',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({topic:c.NTFY_TOPIC,title:'✅ MOTOLAB kết nối thành công',message:'Đây là thông báo thử từ trang admin-setup.html. Form hỗ trợ và đặt lịch đã có thể gửi tới topic này.',priority:4,tags:['white_check_mark','wrench']})});if(!r.ok)throw new Error('Mã phản hồi '+r.status);status.className='ok';status.textContent='Đã gửi. Hãy kiểm tra ứng dụng ntfy của admin.'}catch(err){status.className='err';status.textContent='Gửi thất bại: '+err.message}finally{btn.disabled=false}
+      });
+    });
+  </script>
+</body>
+</html>

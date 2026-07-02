@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MOTOLAB GARAGE — phụ kiện, nâng cấp, bảo dưỡng và sửa chữa xe máy tại Quy Nhơn." />
+  <meta name="theme-color" content="#080b12" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <title>MOTOLAB GARAGE | Độ & sửa xe chuyên nghiệp</title>
+  <link rel="stylesheet" href="style.css?v=20260703-v3" />
+  <script src="config.js?v=20260703-v3" defer></script>
+  <script src="app.js?v=20260703-v3" defer></script>
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Về đầu trang">
+        <span class="brand-mark">M</span>
+        <span><strong data-store-name>MOTOLAB GARAGE</strong><small>Độ xe & Chăm sóc</small></span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Mở menu">☰</button>
+      <nav class="main-nav" id="mainNav">
+        <a href="#products">Sản phẩm</a>
+        <a href="#services">Dịch vụ</a>
+        <a href="#projects">Dự án</a>
+        <a href="#booking">Đặt lịch</a>
+        <a href="#support-contact">Hỗ trợ</a>
+        <a href="#contact">Liên hệ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="openSearch" aria-label="Tìm kiếm">⌕</button>
+        <button class="cart-btn" id="openCart" aria-label="Mở giỏ hàng">🛒 <span id="cartCount">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-grid container">
+        <div class="hero-copy reveal">
+          <span class="eyebrow"><i></i> XƯỞNG ĐỘ XE & CHĂM SÓC CHUYÊN NGHIỆP</span>
+          <h1>Biến chiếc xe của bạn thành <em>một dấu ấn riêng.</em></h1>
+          <p>Từ bảo dưỡng định kỳ đến nâng cấp hiệu năng và ngoại hình — mọi hạng mục đều được tư vấn rõ ràng, báo giá trước và thi công theo quy trình.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#booking">Đặt lịch kiểm tra <span>→</span></a>
+            <a class="btn btn-ghost" href="#products">Xem phụ kiện</a>
+          </div>
+          <div class="trust-row">
+            <div><strong>2.500+</strong><span>Lượt xe phục vụ</span></div>
+            <div><strong>12 tháng</strong><span>Bảo hành hạng mục</span></div>
+            <div><strong>4.9/5</strong><span>Đánh giá khách hàng</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="hero-glow"></div>
+          <img src="assets/hero-workshop.svg" alt="Xe máy phong cách thể thao trong xưởng MOTOLAB" />
+          <div class="floating-card card-one"><span>⚡</span><div><b>TINH CHỈNH ECU</b><small>Tối ưu phản hồi ga</small></div></div>
+          <div class="floating-card card-two"><span>🛡️</span><div><b>BẢO HÀNH RÕ RÀNG</b><small>Hỗ trợ sau lắp đặt</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Điểm nổi bật">
+      <div class="ticker-track">
+        <span>PHỤ TÙNG CHÍNH HÃNG</span><b>✦</b><span>KỸ THUẬT CHUẨN</span><b>✦</b><span>BÁO GIÁ MINH BẠCH</span><b>✦</b><span>HỖ TRỢ NHANH</span><b>✦</b><span>PHỤ TÙNG CHÍNH HÃNG</span><b>✦</b><span>KỸ THUẬT CHUẨN</span><b>✦</b>
+      </div>
+    </section>
+
+    <section class="section" id="products">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><span class="eyebrow">SẢN PHẨM NỔI BẬT</span><h2>Nâng cấp đúng món,<br />khác biệt đúng chất.</h2></div>
+          <p>Danh mục được tuyển chọn theo tiêu chí tương thích, độ bền, hiệu quả sử dụng và khả năng bảo hành.</p>
+        </div>
+
+        <div class="product-toolbar reveal">
+          <div class="category-tabs" id="categoryTabs"></div>
+          <label class="sort-box">Sắp xếp
+            <select id="sortProducts">
+              <option value="featured">Nổi bật</option>
+              <option value="price-asc">Giá tăng dần</option>
+              <option value="price-desc">Giá giảm dần</option>
+              <option value="rating">Đánh giá cao</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="product-grid" id="productGrid" aria-live="polite"></div>
+        <div class="center-actions"><button class="btn btn-ghost" id="showAllProducts">Hiển thị toàn bộ sản phẩm</button></div>
+      </div>
+    </section>
+
+    <section class="section service-section" id="services">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><span class="eyebrow">DỊCH VỤ TẠI XƯỞNG</span><h2>Một nơi, chăm xe<br />toàn diện.</h2></div>
+          <p>Tiếp nhận theo tình trạng thực tế, kiểm tra trước khi sửa và chỉ thực hiện khi khách hàng đồng ý.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card reveal"><span>01</span><div class="service-icon">🔧</div><h3>Bảo dưỡng định kỳ</h3><p>Kiểm tra dầu nhớt, lọc gió, bugi, phanh, lốp, truyền động và hệ thống điện theo mốc sử dụng.</p><ul><li>Checklist rõ ràng</li><li>Nhắc lịch lần sau</li></ul></article>
+          <article class="service-card reveal"><span>02</span><div class="service-icon">⚙️</div><h3>Sửa máy & truyền động</h3><p>Chẩn đoán tiếng động lạ, yếu máy, hao xăng, rung giật; đo kiểm trước khi đề xuất phương án.</p><ul><li>Báo lỗi có căn cứ</li><li>Báo giá trước thi công</li></ul></article>
+          <article class="service-card reveal"><span>03</span><div class="service-icon">⚡</div><h3>Điện, đèn & ECU</h3><p>Xử lý sạc yếu, khó đề, chập điện; nâng cấp ánh sáng và tinh chỉnh ECU phù hợp nhu cầu.</p><ul><li>Đi dây gọn, có cầu chì</li><li>Kiểm tra tải điện</li></ul></article>
+          <article class="service-card reveal"><span>04</span><div class="service-icon">🏁</div><h3>Nâng cấp hiệu năng</h3><p>Tư vấn phanh, phuộc, lốp, lọc gió, ống xả theo ngân sách và mục đích đi phố hoặc touring.</p><ul><li>Ưu tiên an toàn</li><li>Không ép mua combo</li></ul></article>
+          <article class="service-card reveal"><span>05</span><div class="service-icon">✨</div><h3>Chăm sóc ngoại hình</h3><p>Vệ sinh chi tiết, đánh bóng, phủ bảo vệ, làm mới nhựa nhám và xử lý các vết xước nhẹ.</p><ul><li>Quy trình an toàn sơn</li><li>Bàn giao sạch sẽ</li></ul></article>
+          <article class="service-card reveal"><span>06</span><div class="service-icon">🆘</div><h3>Hỗ trợ sự cố</h3><p>Tiếp nhận nhanh các trường hợp xe không đề, thủng lốp, hết bình hoặc cần tư vấn khẩn.</p><ul><li>Gọi nhanh một chạm</li><li>Gửi lịch về điện thoại</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process-section">
+      <div class="container">
+        <div class="section-heading reveal"><div><span class="eyebrow">QUY TRÌNH MINH BẠCH</span><h2>4 bước để xe<br />trở lại tốt nhất.</h2></div></div>
+        <div class="process-line">
+          <div class="process-item reveal"><b>01</b><h3>Tiếp nhận</h3><p>Ghi nhận tình trạng, nhu cầu và lịch sử sử dụng xe.</p></div>
+          <div class="process-item reveal"><b>02</b><h3>Kiểm tra</h3><p>Đo kiểm, xác định nguyên nhân và mức độ cần xử lý.</p></div>
+          <div class="process-item reveal"><b>03</b><h3>Báo giá</h3><p>Liệt kê phụ tùng, công việc, thời gian và bảo hành.</p></div>
+          <div class="process-item reveal"><b>04</b><h3>Thi công</h3><p>Thực hiện, chạy thử, nghiệm thu và hướng dẫn sử dụng.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><span class="eyebrow">DỰ ÁN ĐÃ HOÀN THIỆN</span><h2>Mỗi bản độ là<br />một câu chuyện.</h2></div>
+          <p>Nhấn vào từng hình để xem phong cách và hạng mục nổi bật.</p>
+        </div>
+        <div class="gallery-grid" id="galleryGrid"></div>
+      </div>
+    </section>
+
+    <section class="section comparison-section">
+      <div class="container comparison-wrap reveal">
+        <div class="comparison-copy"><span class="eyebrow">TRƯỚC & SAU</span><h2>Một lần chăm đúng,<br />khác biệt nhìn thấy.</h2><p>Kéo thanh trượt để so sánh diện mạo xe trước và sau khi vệ sinh, hiệu chỉnh và nâng cấp.</p></div>
+        <div class="compare-box" id="compareBox">
+          <img src="assets/compare-before.svg" alt="Xe trước khi chăm sóc" />
+          <div class="compare-after" id="compareAfter"><img src="assets/compare-after.svg" alt="Xe sau khi chăm sóc" /></div>
+          <input type="range" id="compareRange" min="0" max="100" value="50" aria-label="So sánh trước và sau" />
+          <span class="compare-label before">TRƯỚC</span><span class="compare-label after">SAU</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section booking-section" id="booking">
+      <div class="container booking-grid">
+        <div class="booking-copy reveal">
+          <span class="eyebrow">ĐẶT LỊCH NHANH</span>
+          <h2>Giữ chỗ trước,<br />không phải chờ lâu.</h2>
+          <p>Điền thông tin và mô tả tình trạng. Yêu cầu sẽ tạo thông báo trực tiếp trên điện thoại của quản trị viên qua ntfy.</p>
+          <div class="contact-mini"><span>☎</span><div><small>Số điện thoại</small><a data-phone-link href="tel:0901234567" data-phone>0901 234 567</a></div></div>
+          <div class="contact-mini"><span class="zalo-mini">Z</span><div><small>Nhắn tin Zalo</small><a data-zalo-link href="#" target="_blank" rel="noopener">Mở cuộc trò chuyện Zalo</a></div></div>
+          <div class="contact-mini"><span>⌖</span><div><small>Địa chỉ</small><p data-address>123 Nguyễn Thái Học, Quy Nhơn</p></div></div>
+          <div class="sample-address-note" id="sampleAddressNotice">Địa chỉ đang là dữ liệu mẫu. Hãy sửa trong <b>config.js</b> trước khi đăng website.</div>
+        </div>
+
+        <form class="smart-form reveal" id="bookingForm">
+          <div class="form-title"><h3>Thông tin đặt lịch</h3><span>Phản hồi sớm nhất có thể</span></div>
+          <div class="field-grid">
+            <label>Họ và tên<input name="name" autocomplete="name" required placeholder="Nguyễn Văn A" /></label>
+            <label>Số điện thoại<input name="phone" inputmode="tel" required placeholder="09xx xxx xxx" /></label>
+          </div>
+          <div class="field-grid">
+            <label>Dòng xe<input name="vehicle" required placeholder="Ví dụ: Exciter 155" /></label>
+            <label>Dịch vụ<select name="service" required><option value="">Chọn dịch vụ</option><option>Bảo dưỡng định kỳ</option><option>Sửa máy & truyền động</option><option>Điện, đèn & ECU</option><option>Nâng cấp hiệu năng</option><option>Chăm sóc ngoại hình</option><option>Kiểm tra tổng quát</option></select></label>
+          </div>
+          <div class="field-grid">
+            <label>Ngày mong muốn<input type="date" name="date" required /></label>
+            <label>Khung giờ<select name="time" required><option value="">Chọn giờ</option><option>07:30 – 09:30</option><option>09:30 – 11:30</option><option>13:30 – 15:30</option><option>15:30 – 17:30</option><option>17:30 – 20:00</option></select></label>
+          </div>
+          <label>Mô tả tình trạng / yêu cầu<textarea name="message" rows="4" required placeholder="Xe có tiếng kêu, muốn kiểm tra phanh và thay nhớt..."></textarea></label>
+          <label class="check-field"><input type="checkbox" required /> <span>Tôi đồng ý để cửa hàng liên hệ xác nhận lịch.</span></label>
+          <button class="btn btn-primary submit-btn" type="submit">Gửi lịch về điện thoại <span>→</span></button>
+          <p class="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section testimonials-section">
+      <div class="container">
+        <div class="section-heading reveal"><div><span class="eyebrow">KHÁCH HÀNG NÓI GÌ</span><h2>Uy tín được tạo từ<br />từng lần bàn giao.</h2></div></div>
+        <div class="testimonial-grid">
+          <article class="testimonial reveal"><div class="stars">★★★★★</div><p>“Tư vấn rất rõ, cho xem phụ tùng cũ và báo giá trước. Xe chạy êm hơn hẳn sau lần bảo dưỡng.”</p><footer><span>HN</span><div><b>Hoàng Nam</b><small>Khách bảo dưỡng định kỳ</small></div></footer></article>
+          <article class="testimonial reveal"><div class="stars">★★★★★</div><p>“Bộ đèn lắp gọn, không cắt dây zin. Đi tối sáng hơn nhưng không gây chói xe đối diện.”</p><footer><span>MT</span><div><b>Minh Trí</b><small>Khách nâng cấp ánh sáng</small></div></footer></article>
+          <article class="testimonial reveal"><div class="stars">★★★★★</div><p>“Mình thích nhất là không bị ép mua đồ. Xưởng đưa ba phương án theo ngân sách để tự chọn.”</p><footer><span>QA</span><div><b>Quốc Anh</b><small>Khách nâng cấp phanh</small></div></footer></article>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section support-contact-section" id="support-contact">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><span class="eyebrow">HỖ TRỢ & LIÊN HỆ</span><h2>Cần giúp đỡ?<br />Chọn cách nhanh nhất.</h2></div>
+          <p>Người dùng có thể gọi trực tiếp, nhắn Zalo hoặc gửi nội dung để quản trị viên nhận thông báo ngay trên điện thoại.</p>
+        </div>
+        <div class="support-contact-grid">
+          <div class="support-visual reveal"><img src="assets/support-phone.svg" alt="Hỗ trợ khách hàng và nhận thông báo trên điện thoại" loading="lazy" /></div>
+          <div class="support-options reveal">
+            <a class="contact-option" data-phone-link href="tel:0901234567"><span>☎</span><div><b>Gọi điện trực tiếp</b><small>Trao đổi nhanh với kỹ thuật viên</small><strong data-phone>0901 234 567</strong></div></a>
+            <a class="contact-option zalo-option" data-zalo-link href="#" target="_blank" rel="noopener"><span>Z</span><div><b>Nhắn tin qua Zalo</b><small>Gửi hình ảnh xe và nhận tư vấn</small><strong>Mở Zalo ngay →</strong></div></a>
+            <button class="contact-option notify-option" data-open-support><span>🔔</span><div><b>Gửi thông báo cho quản trị viên</b><small>Nội dung được chuyển qua ntfy đến điện thoại</small><strong>Mở biểu mẫu hỗ trợ →</strong></div></button>
+          </div>
+          <form class="smart-form quick-notify-form reveal" id="quickNotifyForm">
+            <div class="form-title"><h3>Gửi yêu cầu nhanh</h3><span>Quản trị viên nhận thông báo trên điện thoại</span></div>
+            <div class="field-grid"><label>Họ và tên<input name="name" required placeholder="Tên của bạn" /></label><label>Số điện thoại<input name="phone" inputmode="tel" required placeholder="09xx xxx xxx" /></label></div>
+            <label>Nội dung cần hỗ trợ<textarea name="message" rows="5" required placeholder="Ví dụ: Xe không đề được, cần tư vấn kiểm tra sớm..."></textarea></label>
+            <input type="hidden" name="subject" value="Yêu cầu nhanh từ website" />
+            <button class="btn btn-primary submit-btn" type="submit">Gửi thông báo về điện thoại <span>🔔</span></button>
+            <p class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section">
+      <div class="container faq-grid">
+        <div class="faq-copy reveal"><span class="eyebrow">CÂU HỎI THƯỜNG GẶP</span><h2>Thông tin cần biết<br />trước khi đến xưởng.</h2><p>Không thấy câu trả lời? Dùng nút “Hỗ trợ” ở góc màn hình để gửi trực tiếp cho admin.</p></div>
+        <div class="accordion" id="faqAccordion">
+          <details open class="reveal"><summary>Cửa hàng có kiểm tra xe miễn phí không?</summary><p>Kiểm tra sơ bộ và tư vấn ban đầu được thực hiện miễn phí. Các hạng mục cần tháo lắp hoặc đo kiểm chuyên sâu sẽ được báo trước.</p></details>
+          <details class="reveal"><summary>Sản phẩm có bảo hành không?</summary><p>Mỗi sản phẩm có thời hạn riêng, thông thường từ 3 đến 24 tháng. Phiếu hoặc thông tin bảo hành được ghi rõ khi bàn giao.</p></details>
+          <details class="reveal"><summary>Có được mang phụ tùng bên ngoài đến lắp không?</summary><p>Có thể tiếp nhận sau khi kỹ thuật viên kiểm tra độ tương thích và tình trạng sản phẩm. Xưởng có thể từ chối linh kiện không an toàn.</p></details>
+          <details class="reveal"><summary>Đặt lịch có phải thanh toán trước không?</summary><p>Đặt lịch kiểm tra thông thường không cần cọc. Các sản phẩm đặt riêng hoặc combo giá trị cao có thể cần cọc sau khi hai bên xác nhận.</p></details>
+          <details class="reveal"><summary>Cửa hàng có nhận xe tay ga và xe côn tay không?</summary><p>Có. Xưởng tiếp nhận nhiều dòng xe phổ biến; vui lòng gửi tên xe và đời xe để được kiểm tra khả năng cung ứng phụ tùng.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-strip">
+      <div class="container cta-content reveal"><div><span>CẦN KIỂM TRA XE NGAY?</span><h2>Gọi hoặc nhắn Zalo cho kỹ thuật viên.</h2></div><div class="cta-actions"><a class="btn btn-light" data-phone-link href="tel:0901234567">☎ <span data-phone>0901 234 567</span></a><a class="btn btn-zalo" data-zalo-link href="#" target="_blank" rel="noopener">Z Nhắn Zalo</a></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container footer-grid">
+      <div class="footer-brand"><a class="brand" href="#top"><span class="brand-mark">M</span><span><strong data-store-name>MOTOLAB GARAGE</strong><small>Độ xe & Chăm sóc</small></span></a><p data-slogan>Độ chất riêng — Sửa chuẩn kỹ thuật</p><div class="socials"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="TikTok">♪</a><a href="#" aria-label="YouTube">▶</a></div></div>
+      <div><h4>Khám phá</h4><a href="#products">Sản phẩm</a><a href="#services">Dịch vụ</a><a href="#projects">Dự án</a><a href="#booking">Đặt lịch</a></div>
+      <div><h4>Hỗ trợ</h4><a href="#faqAccordion">Câu hỏi thường gặp</a><button class="link-button" data-open-support>Gửi thông báo đến quản trị viên</button><a data-zalo-link href="#" target="_blank" rel="noopener">Nhắn tin qua Zalo</a><a href="mailto:motolab.quynhon@example.com" data-email-link data-email>motolab.quynhon@example.com</a></div>
+      <div><h4>Thông tin cửa hàng</h4><p data-address>123 Nguyễn Thái Học, P. Ngô Mây, TP. Quy Nhơn</p><p data-opening-hours>Thứ 2 – Chủ nhật: 07:30 – 20:30</p><a data-map-link href="#" target="_blank" rel="noopener">Mở Google Maps →</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="currentYear"></span> <span data-store-name>MOTOLAB GARAGE</span>. Đã đăng ký bản quyền.</span><span>Thiết kế để dễ chỉnh sửa và triển khai.</span></div>
+  </footer>
+
+  <button class="support-fab" data-open-support aria-label="Mở hỗ trợ"><span>🔔</span><b>Gửi hỗ trợ</b></button>
+  <a class="zalo-fab" data-zalo-link href="#" target="_blank" rel="noopener" aria-label="Nhắn Zalo"><b>Zalo</b></a>
+  <a class="phone-fab" data-phone-link href="tel:0901234567" aria-label="Gọi cửa hàng">☎</a>
+
+  <div class="modal" id="productModal" aria-hidden="true"><div class="modal-backdrop" data-close-modal></div><div class="modal-panel product-modal-panel"><button class="modal-close" data-close-modal>×</button><div id="productModalContent"></div></div></div>
+
+  <div class="modal" id="cartModal" aria-hidden="true"><div class="modal-backdrop" data-close-modal></div><aside class="cart-panel"><div class="cart-head"><div><small>GIỎ HÀNG</small><h3>Sản phẩm đã chọn</h3></div><button class="modal-close" data-close-modal>×</button></div><div id="cartItems" class="cart-items"></div><div class="cart-summary"><div><span>Tạm tính</span><strong id="cartTotal">0₫</strong></div><p>Giá chưa gồm phí lắp đặt nếu có. Admin sẽ xác nhận chính xác.</p><button class="btn btn-primary" id="cartSupportBtn">Gửi giỏ hàng cho admin</button></div></aside></div>
+
+  <div class="modal" id="supportModal" aria-hidden="true"><div class="modal-backdrop" data-close-modal></div><div class="modal-panel support-panel"><button class="modal-close" data-close-modal>×</button><span class="eyebrow">HỖ TRỢ TRỰC TIẾP</span><h3>Gửi nội dung đến admin</h3><p>Nội dung sẽ tạo thông báo trên điện thoại của quản trị viên qua ntfy. Bạn cũng có thể <a class="inline-zalo" data-zalo-link href="#" target="_blank" rel="noopener">nhắn trực tiếp qua Zalo</a>.</p><form id="supportForm" class="smart-form compact-form"><label>Họ và tên<input name="name" required placeholder="Tên của bạn" /></label><label>Số điện thoại<input name="phone" inputmode="tel" required placeholder="09xx xxx xxx" /></label><label>Chủ đề<select name="subject" required><option>Tư vấn sản phẩm</option><option>Hỏi giá sửa xe</option><option>Đặt lịch khẩn</option><option>Phản ánh dịch vụ</option><option>Hỗ trợ khác</option></select></label><label>Nội dung<textarea name="message" rows="5" required placeholder="Hãy mô tả càng cụ thể càng tốt..."></textarea></label><button class="btn btn-primary submit-btn" type="submit">Gửi thông báo về điện thoại <span>🔔</span></button><p class="form-status" aria-live="polite"></p></form></div></div>
+
+  <div class="search-overlay" id="searchOverlay" aria-hidden="true"><div class="search-inner"><button class="search-close" id="closeSearch">×</button><span>TÌM KIẾM SẢN PHẨM</span><input id="globalSearch" placeholder="Nhập tên phụ kiện, ví dụ: phanh, đèn, nhớt..." autocomplete="off" /><div id="searchResults" class="search-results"></div></div></div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
